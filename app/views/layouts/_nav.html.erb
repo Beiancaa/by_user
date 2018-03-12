@@ -1,0 +1,14 @@
+<nav class="navbar fixed-top navbar-expand-sm navbar-inverse bg-dark">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="nav-content"></div>
+    <ul class="nav navbar-nav">
+      <div class="container">
+        <p>
+          <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+        |
+          <%= link_to_unless I18n.locale == :ar, "العربية", locale: :ar %>
+        </p>      
+      </div>
+    </ul>
+  </div>
+</nav>

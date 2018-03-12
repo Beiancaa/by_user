@@ -6,6 +6,21 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Father's Name</th>
+      <th>Grandpa's Name</th>
+      <th>Family Name</th>
+      <th>Birthday</th>
+      <th>Gender</th>
+      <th>Locality</th>
+      <th>Alley</th>
+      <th>House Number</th>
+      <th>Neighborhood</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Cell Phone Number</th>
+      <th>Home Phone Number</th>
+      <th>Email Address</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +29,21 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
+        <td><%= user.father_name %></td>
+        <td><%= user.grandpa_name %></td>
+        <td><%= user.family_name %></td>
+        <td><%= user.birthday %></td>
+        <td><%= user.gender %></td>
+        <td><%= user.locality %></td>
+        <td><%= user.alley %></td>
+        <td><%= user.house_number %></td>
+        <td><%= user.neighborhood %></td>
+        <td><%= user.city %></td>
+        <td><%= user.state %></td>
+        <td><%= user.country %></td>
+        <td><%= user.cell_phone_number %></td>
+        <td><%= user.home_phone_number %></td>
+        <td><%= user.email_address %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

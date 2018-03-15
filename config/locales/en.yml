@@ -6,14 +6,20 @@ en:
     are_you_sure: Are you sure?
     back: Back
     edit: Edit
-    product:
+    male: male
+    female: female
+    user:
       index:
-        title: List of all products
-        new_product: New product
+        title: Users List
+        new_user: New User
       edit:
-        title: Edit Product
+        title: Edit User
       new:
-        title: New product
+        title: New User
+        create_user: create user
+        error: error
       flash_messages:
-        product_was_successfully_created: 'Product was successfully created.'
-        product_was_successfully_updated: 'Product was successfully updated.'
+        user_was_successfully_created: user was successfully created.
+        user_was_successfully_updated: user was successfully updated.
+        user_was_successfully_updated: user was successfully desroyed.
+  

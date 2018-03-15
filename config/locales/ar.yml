@@ -1,0 +1,100 @@
+# ruby encoding: utf-8
+ar:
+  activerecord:
+    models:
+    attributes:
+      user:
+        name: 'الأسم'
+        father_name: 'إسم الأب'
+        grandpa_name: 'إسم الجد'
+        family_name: 'إسم العائلة'
+        birthday: 'تاريخ الميلاد'
+        gender: 'الجنس'
+        locality: 'محلة'
+        alley: 'زقاق'
+        house_number: 'رقم الدار'
+        neighborhood: 'حي'
+        city: 'مدينة'
+        state: 'محافظة'
+        country: 'دولة'
+        cell_phone_number: 'رقم الهاتف المحمول'
+        home_phone_number: 'رقم الهاتف المنزلي'
+        email_address: 'البريد الإلكتروني'
+
+  views:
+    are_you_sure?: هل انت متأكد؟
+    back: عودة
+    show: عرض
+    edit: تعديل
+    destroy: مسح
+    male: ذكر
+    female: انثى
+    user:
+      index:        
+        users_list: قائمة المستخدمين
+        new_user:  حساب جديد
+      edit:
+        title:  مدختسملا تامولعم ليدعت 
+      new:
+        new_user: حساب جديد
+        create_user: إنشاء حساب
+        error: خطأ 
+
+      flash_messages:
+        user_was_successfully_created: 'تم انشاء الحساب بنجاح'
+        user_was_successfully_updated: 'تم تحديث الحساب بنجاح'
+        user_was_successfully_destroyed: 'تم مسح الحساب ينجاح'         
+
+  errors:  
+    format: "%{message}"
+    messages:
+      accepted: يجب أن تقبل %{attribute}
+      blank: لا يمكن أن يكون محتوى %{attribute} فارغاً
+      present:  يجب ترك حقل %{attribute} فارغاً
+      confirmation: محتوى %{attribute} لا يتوافق مع %{attribute}
+      empty: لا يمكن أن يكون محتوى %{attribute} فارغاً
+      equal_to: يجب أن يساوي طول %{attribute} %{count}
+      even: يجب أن يكون عدد %{attribute} زوجياً
+      greater_than: ميجب أن يكون عدد %{attribute} أكبر من %{count}
+      greater_than_or_equal_to: يجب أن يكون عدد %{attribute} أكبر أو يساوي %{count}
+      invalid: محتوى %{attribute} غير صالح
+      less_than: يجب أن يكون عدد %{attribute} أصغر من %{count}
+      not_a_number: يجب أن يكون محتوى %{attribute} رقماً
+      not_an_integer: يجب أن يكون عدد %{attribute} عدد صحيحاً
+      too_long:
+        zero: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو ولا حرف)
+        one: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو حرف واحد)
+        two: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو حرفان)
+        few: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو %{count} حروف)
+        many: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو %{count} حرف)
+        other: محتوى %{attribute} أطول من اللّازم (الحد الأقصى هو %{count} حرف)
+      too_short:
+        zero: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو ولا حرف)
+        one: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو حرف واحد)
+        two: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو حرفان)
+        few: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو %{count} حروف)
+        many: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو %{count} حرف)
+        other: محتوى %{attribute} أقصر من اللّازم (الحد الأدنى هو %{count} حرف)
+      wrong_length:
+        zero: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
+        one: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون حرف واحد)
+        two: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        few: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون %{count} أحرف)
+        many: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+        other: طول %{attribute} غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+      other_than:
+        zero: طول %{attribute} يجب ألاّ يكون صفر حرف
+        one: طول %{attribute} يجب ألاّ يكون حرفاً واحداً
+        two: طول %{attribute} يجب ألاّ يكون حرفان
+        few: طول %{attribute} يجب ألاّ يكون %{count} أحرف
+        many: طول %{attribute} يجب ألاّ يكون %{count} حرفاً
+        other: طول %{attribute} يجب ألاّ يكون %{count} حرفاً
+    template:
+      body: "يُرجى التحقّق من الحقول التّالية:%{attribute}"
+      header:
+        zero: 'ليس بالامكان حفظ %{model} لسبب ولا خطأ.'
+        one: 'ليس بالامكان حفظ %{model} لسبب وجود خطأ واحد.'
+        two: 'ليس بالامكان حفظ %{model} لسبب وجود خطئان.'
+        few: 'ليس بالامكان حفظ %{model} لسبب وجود %{count} أخطاء.'
+        many: 'ليس بالامكان حفظ %{model} لسبب وجود %{count} خطأ.'
+        other: 'ليس بالامكان حفظ %{model} لسبب وجود %{count} خطأ.'  

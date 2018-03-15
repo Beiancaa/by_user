@@ -1,57 +1,117 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+  <p id="notice"><%= notice %></p>
+  <center><h1><%= t 'views.user.index.users_list' %></h1></center>
+    <div dir="auto">
+      <table class="table table-striped table-inverse">
+        <thead>
+          <tr>
+            <th>
+              <center><%= User.human_attribute_name(:name) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:father_name) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:grandpa_name) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:family_name) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:birthday) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:gender) %></center>
+            </th>
+            <th>
+              <center><%= User.human_attribute_name(:locality) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:alley) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:house_number) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:neighborhood) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:city) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:state) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:country) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:cell_phone_number) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:home_phone_number) %></center></th>
+            <th>
+              <center><%= User.human_attribute_name(:email_address) %></center></th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Father's Name</th>
-      <th>Grandpa's Name</th>
-      <th>Family Name</th>
-      <th>Birthday</th>
-      <th>Gender</th>
-      <th>Locality</th>
-      <th>Alley</th>
-      <th>House Number</th>
-      <th>Neighborhood</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Cell Phone Number</th>
-      <th>Home Phone Number</th>
-      <th>Email Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.father_name %></td>
-        <td><%= user.grandpa_name %></td>
-        <td><%= user.family_name %></td>
-        <td><%= user.birthday %></td>
-        <td><%= user.gender %></td>
-        <td><%= user.locality %></td>
-        <td><%= user.alley %></td>
-        <td><%= user.house_number %></td>
-        <td><%= user.neighborhood %></td>
-        <td><%= user.city %></td>
-        <td><%= user.state %></td>
-        <td><%= user.country %></td>
-        <td><%= user.cell_phone_number %></td>
-        <td><%= user.home_phone_number %></td>
-        <td><%= user.email_address %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                <center><%= user.name %></center>
+              </td>
+              <td>
+                <center><%= user.father_name %></center>
+              </td>
+              <td>
+                <center><%= user.grandpa_name %></center>
+              </td>
+              <td>
+                <center><%= user.family_name %></center>
+              </td>
+              <td>
+                <center><%= user.birthday %></center>
+              </td>
+              <td>
+                <center><%= user.gender %></center>
+              </td>
+              <td>
+                <center><%= user.locality %></center>
+              </td>
+              <td>
+                <center><%= user.alley %></center>
+              </td>
+              <td>
+                <center><%= user.house_number %></center>
+              </td>
+              <td>
+                <center><%= user.neighborhood %></center>
+              </td>
+              <td>
+                <center><%= user.city %></center>
+              </td>
+              <td>
+                <center><%= user.state %></center>
+              </td>
+              <td>
+                <center><%= user.country %></center>
+              </td>
+              <td>
+                <center><%= user.cell_phone_number %></center>
+              </td>
+              <td>
+                <center><%= user.home_phone_number %></center>
+              </td>
+              <td>
+                <center><%= user.email_address %></center>
+              </td>
+              <td>
+                <center><%= link_to 'Show', user %></center>
+              </td>
+              <td>
+                <center><%= link_to 'Edit', edit_user_path(user) %></center>
+              </td>
+              <td>
+                <center><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></center>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <%= link_to t('views.user.index.new_user'), new_user_path %>
+  <br>  
+ 

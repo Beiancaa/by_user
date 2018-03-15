@@ -1,0 +1,92 @@
+nav {
+  background-color:#000000;
+  color:#ffffff;
+}
+
+.navbar .navbar-nav > p {
+  color:#fff;
+}
+
+div > center > h1{
+  font-style: italic;
+}
+
+.form-field{
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 75%;
+  background-color: #E6E6FA;
+  font-style: italic;
+}
+
+input[type=text], input[type=date], input[type=email], select{
+  height: 30px;
+  width: 150px;
+  margin: 5px;  
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+}
+
+label{
+  display: inline-block;
+  width: 120px;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+label:after{
+  content: " *";
+  color: red;
+}
+
+input[type=submit]{
+  background-color: #A9A9A9;
+  color: #000;
+  width: 200px;
+  height: 40px;
+}
+
+#error_explanation{
+  border: 3px solid #000000;
+  border-radius: 20px;
+  width: 75%;
+  background-color: #E6E6FA; 
+  color: #DC143C; 
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

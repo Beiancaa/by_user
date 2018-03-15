@@ -1,82 +1,142 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="container">
+  <center> 
+    <div dir="auto">  
+      <%= form_with(model: user, local: true) do |form| %>
+        <% if user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(user.errors.count, t('views.user.new.error')) %></h2>          
+             
+            <ul>
+            <% user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        
+        <div class="form-field">
+          <div class="col-12 col-form-label">
+            <div class="form-group row">                         
+              <div class="field">
+                <%= form.label :name %>
+                <%= form.text_field :name, id: :user_name %>      
+              </div>                 
+              <div class="col">
+                <div class="field">                  
+                  <%= form.label :father_name %>                
+                  <%= form.text_field :father_name, id: :user_name %>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :grandpa_name %>
+                <%= form.text_field :grandpa_name, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :family_name %>
+                  <%= form.text_field :family_name, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :birthday %>
+                <%= form.date_field :birthday, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">                  
+                  <%= form.label :gender %>
+                  <%= form.select :gender, [t('views.male'), t('views.female')], {include_blank: ""}, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :locality %>
+                <%= form.text_field :locality, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :alley %>
+                  <%= form.text_field :alley, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="col-12">
+            <div class="form-group row">  
+              <div class="field">
+                <%= form.label :house_number %>
+                <%= form.text_field :house_number, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :neighborhood %>
+                  <%= form.text_field :neighborhood, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :city %>
+                <%= form.text_field :city, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :state %>
+                  <%= form.text_field :state, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :country %>
+                <%= form.text_field :country, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :email_address %>
+                  <%= form.text_field :email_address, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :home_phone_number %>
+                <%= form.text_field :home_phone_number, id: :user_name %>
+                <span class="asterisk_input"></span>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :cell_phone_number %>
+                  <%= form.text_field :cell_phone_number, id: :user_name %>
+                </div>
+              </div>  
+            </div>
+          </div>  
+             
+          <div class="actions">
+            <%= form.submit t('views.user.new.create_user') %>
+          </div>
+          <div class="btn">
+            <%= link_to I18n.t('views.back'), users_path %>
+          </div>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :user_name %>
+    </div>  
   </div>
-  <div class="field">
-    <%= form.label :father_name %>
-    <%= form.text_field :father_name, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :grandpa_name %>
-    <%= form.text_field :grandpa_name, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :family_name %>
-    <%= form.text_field :family_name, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :birthday %>
-    <%= form.date_field :birthday, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.select :gender, ['male', 'female'], {include_blank: ""}, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :locality %>
-    <%= form.text_field :locality, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :alley %>
-    <%= form.text_field :alley, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :house_number %>
-    <%= form.text_field :house_number, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :neighborhood %>
-    <%= form.text_field :neighborhood, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :cell_phone_number %>
-    <%= form.text_field :cell_phone_number, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :home_phone_number %>
-    <%= form.text_field :home_phone_number, id: :user_name %>
-  </div>
-  <div class="field">
-    <%= form.label :email_address %>
-    <%= form.email_field :email_address, id: :user_name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>  

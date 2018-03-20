@@ -1,0 +1,159 @@
+<div class="container">
+  <center> 
+    <h2><%= t 'views.user.new.edit_user'%></h2>
+    <div dir="auto">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |form| %>
+        <%= devise_error_messages! %>
+                
+        <div class="form-field">
+          <div class="col-12 col-form-label">
+            <div class="form-group row">                         
+              <div class="field">
+                <%= form.label :name %>
+                <%= form.text_field :name, id: :user_name %>      
+              </div>                 
+              <div class="col">
+                <div class="field">                  
+                  <%= form.label :father_name %>                
+                  <%= form.text_field :father_name, id: :user_name %>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :grandpa_name %>
+                <%= form.text_field :grandpa_name, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :family_name %>
+                  <%= form.text_field :family_name, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :birthday %>
+                <%= form.date_field :birthday, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">                  
+                  <%= form.label :gender %>
+                  <%= form.select :gender, [t('views.male'), t('views.female')], {include_blank: ""}, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :locality %>
+                <%= form.text_field :locality, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :alley %>
+                  <%= form.text_field :alley, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="col-12">
+            <div class="form-group row">  
+              <div class="field">
+                <%= form.label :house_number %>
+                <%= form.text_field :house_number, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :neighborhood %>
+                  <%= form.text_field :neighborhood, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row">   
+              <div class="field">
+                <%= form.label :city %>
+                <%= form.text_field :city, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :state %>
+                  <%= form.text_field :state, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :country %>
+                <%= form.text_field :country, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :email %>
+                  <%= form.text_field :email, id: :user_name %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :home_phone_number %>
+                <%= form.text_field :home_phone_number, id: :user_name %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :cell_phone_number %>
+                  <%= form.text_field :cell_phone_number, id: :user_name, placeholder: '07XXXXXXXXX' %>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :password %>
+                <% if @minimum_password_length %>
+                <% end %>
+                <%= form.password_field :password, autocomplete: "off", placeholder: '6 charcter minimum' %>
+              </div>
+              <div class="col">
+                <div class="field">
+                  <%= form.label :password_confirmation %>
+                  <%= form.password_field :password_confirmation, autocomplete: "off" %>
+                </div>
+              </div>  
+            </div>
+          </div> 
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <center>
+                  <%= form.label :current_password %>
+                  <%= form.password_field :current_password, autocomplete: "off" %>
+                </center>
+              </div>  
+            </div>
+          </div>             
+          <div class="actions">
+            <%= form.submit t('views.user.new.update') %>
+          </div>
+        </div>
+      <% end %>
+        <%= link_to t('views.user.new.cancel_account'), registration_path(resource_name), data: { confirm: "are you sure" }, method: :delete %> |
+        <%= link_to t('views.user.new.back'), :back %></br> </br> 
+    </div>  
+  </center>
+</div> 

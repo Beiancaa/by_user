@@ -1,0 +1,26 @@
+<div class="container">
+  <center> 
+    <h2><%= t 'views.user.new.forgot_your_password'%></h2>
+    <div dir="auto">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post })  do |form| %>
+        <%= devise_error_messages! %>
+                
+        <div class="form-field">
+          <div class="col-12 col-form-label">
+            <div class="field">
+              <%= form.label :email %>
+              <%= form.text_field :email, autofocus: true, autocomplete: "email"%>
+            </div>
+          </div>
+          <div class="actions">
+            <%= form.submit t('views.user.new.send_me_reset_password_instructions') %>
+          </div>
+            <%= link_to t('views.user.new.log_in'), new_session_path(resource_name) %></br>
+            <%= link_to t('views.user.new.sign_up'), new_registration_path(resource_name) %></br> </br> 
+        </div>
+      <% end %>
+    </div>  
+  </div>
+</div>  
+
+

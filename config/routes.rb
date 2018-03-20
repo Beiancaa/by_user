@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-    resources :users
-    root to: 'users#index'
+    
+    devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords', confirmations: 'users/confirmations' } 
+
+    root to: 'home#index'
   end
 end

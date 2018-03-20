@@ -4,10 +4,12 @@ en:
     edit: Edit
     destroy: Delete
     are_you_sure: Are you sure?
-    back: Back
     edit: Edit
     male: male
     female: female
+    select_language: Select language
+    forgot_your_password: Forgot Your Password
+    
     user:
       index:
         title: Users List
@@ -17,7 +19,27 @@ en:
       new:
         title: New User
         create_user: create user
+        edit_profile: Edit profile
+        edit_user:  Edit user
+        update: Update
+        sign_up: Sign up
+        log_in: Log in
+        log_out: Log out
         error: error
+        remember_me: remember me
+        hi: Hi
+        forgot_your_password?: Forgot your password?
+        change_your_password: Change your password
+        new_password: new password
+        confirm_new_password: Confirm new password
+        change_my_password: Change my password
+        resend_confirmation_instructions: Resend confirmation instructions
+        send_me_reset_password_instructions: Send me reset password instructions
+        didnot_receive_confirmation_instructions?: Didn't receive confirmation instructions?
+        resend_unlock_instructions: resend_unlock_instructions
+        cancel_account: Cancel account
+        back: Back
+
       flash_messages:
         user_was_successfully_created: user was successfully created.
         user_was_successfully_updated: user was successfully updated.

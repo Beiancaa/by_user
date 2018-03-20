@@ -1,4 +1,7 @@
 en:
+  activerecord:
+    models:
+      user: user
   views:
     show: Show
     edit: Edit

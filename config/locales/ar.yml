@@ -2,6 +2,7 @@
 ar:
   activerecord:
     models:
+      user: الحساب
     attributes:
       user:
         name: 'الأسم'
@@ -70,7 +71,8 @@ ar:
         user_was_successfully_updated: 'تم تحديث الحساب بنجاح'
         user_was_successfully_destroyed: 'تم مسح الحساب ينجاح'         
 
-  errors:  
+  errors: 
+    model:  الحساب
     format: "%{message}"
     messages:
       accepted: يجب أن تقبل %{attribute}

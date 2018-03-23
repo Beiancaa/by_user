@@ -1,19 +1,10 @@
 <div class="container">
   <center> 
-    <div dir="auto">  
-      <%= form_with(model: user, local: true) do |form| %>
-        <% if user.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(user.errors.count, t('views.user.new.error')) %></h2>          
-             
-            <ul>
-            <% user.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-        
+    <h2><%= t 'views.user.new.sign_up'%></h2>
+    <div dir="auto">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+        <%= devise_error_messages! %>
+                
         <div class="form-field">
           <div class="col-12 col-form-label">
             <div class="form-group row">                         
@@ -107,8 +98,8 @@
               </div>
               <div class="col">
                 <div class="field">
-                  <%= form.label :email_address %>
-                  <%= form.text_field :email_address, id: :user_name %>
+                  <%= form.label :email %>
+                  <%= form.text_field :email, id: :user_name %>
                 </div>
               </div>
             </div>
@@ -118,23 +109,35 @@
               <div class="field">
                 <%= form.label :home_phone_number %>
                 <%= form.text_field :home_phone_number, id: :user_name %>
-                <span class="asterisk_input"></span>
               </div>
               <div class="col">
                 <div class="field">
                   <%= form.label :cell_phone_number %>
-                  <%= form.text_field :cell_phone_number, id: :user_name %>
+                  <%= form.text_field :cell_phone_number, id: :user_name, placeholder: '07XXXXXXXXX' %>
                 </div>
               </div>  
             </div>
-          </div>  
-             
+          </div>
+          <div class="col-12">
+            <div class="form-group row"> 
+              <div class="field">
+                <%= form.label :password %>
+                <% if @minimum_password_length %>
+                <% end %>
+                <%= form.password_field :password, autocomplete: "off", placeholder: '6 charcter minumum' %>
+              </div>
+              <div class="col">
+                <div class="field">
+                <%= form.label :password_confirmation %>
+                <%= form.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+              </div>  
+            </div>
+          </div>              
           <div class="actions">
-            <%= form.submit t('views.user.new.create_user') %>
+            <%= form.submit t('views.user.new.sign_up') %>
           </div>
-          <div class="btn">
-            <%= link_to I18n.t('views.back'), users_path %>
-          </div>
+            <%= link_to t('views.user.new.log_in'), new_session_path(resource_name) %></br> </br> 
         </div>
       <% end %>
     </div>  

@@ -2,6 +2,7 @@
 ar:
   activerecord:
     models:
+      user: الحساب
     attributes:
       user:
         name: 'الأسم'
@@ -19,33 +20,59 @@ ar:
         country: 'دولة'
         cell_phone_number: 'رقم الهاتف المحمول'
         home_phone_number: 'رقم الهاتف المنزلي'
-        email_address: 'البريد الإلكتروني'
+        email: 'البريد الإلكتروني'
+        password: 'كلمة السر'
+        password_confirmation: 'تأكيد كلمة السر'
+        encrypted_password: 'كلمة مرور مشفرة'
+        reset_password_token: 'إعادة تعيين رمز كلمة المرور'
+        reset_password_sent_at: 'إعادة تعيين كلمة المرور المرسلة في'
+        remember_created_at: 'تذكر خلق في'
+        sign_in_count: 'تسجيل الدخول'
+        current_sign_in_at: 'تسجيل الدخول الحالي في'
+        last_sign_in_at: 'آخر تسجيل دخول في'
+        current_sign_in_ip:
+        last_sign_in_ip:
+        current_password: كلمة المرور الحالية  
 
   views:
-    are_you_sure?: هل انت متأكد؟
-    back: عودة
-    show: عرض
-    edit: تعديل
-    destroy: مسح
+    are_you_sure?: هل انت متأكد؟    
     male: ذكر
     female: انثى
+    select_language: اختر لغة    
+
     user:
-      index:        
-        users_list: قائمة المستخدمين
-        new_user:  حساب جديد
-      edit:
-        title:  مدختسملا تامولعم ليدعت 
       new:
+        sign_up: انشاء حساب
+        log_in: تسجيل دخول
+        log_out: تسجيل خروج
         new_user: حساب جديد
         create_user: إنشاء حساب
-        error: خطأ 
+        edit_profile: تعديل الملف الشخصي
+        edit_user: تحرير المستخدم
+        update: تحديث
+        error: خطأ
+        remember_me: تذكرنى
+        hi: مرحبا
+        forgot_your_password: نسيت كلمة السر
+        forgot_your_password?: نسيت كلمة السر؟
+        change_your_password: تغيير كلمة السر الخاصة بك
+        new_password: كلمة السر الجديدة
+        confirm_new_password: تأكيد كلمة السر الجديدة
+        change_my_password: تغيير كلمة السر الخاصة بي
+        resend_confirmation_instructions: إعادة إرسال تعليمات التأكيد
+        send_me_reset_password_instructions: أرسل لي إعادة تعيين كلمة المرور
+        didnot_receive_confirmation_instructions?: لم تتلقى تعليمات تأكيد؟
+        resend_unlock_instructions: إعادة إرسال تعليمات الفتح
+        cancel_account: إلغاء الحساب
+        back: عودة
 
       flash_messages:
         user_was_successfully_created: 'تم انشاء الحساب بنجاح'
         user_was_successfully_updated: 'تم تحديث الحساب بنجاح'
         user_was_successfully_destroyed: 'تم مسح الحساب ينجاح'         
 
-  errors:  
+  errors: 
+    model:  الحساب
     format: "%{message}"
     messages:
       accepted: يجب أن تقبل %{attribute}
